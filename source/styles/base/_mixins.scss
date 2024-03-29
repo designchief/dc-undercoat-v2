@@ -1,0 +1,62 @@
+/* body link styles - webflow cannot set box-shadow size in ems */
+@mixin text-link {
+    display: inline-block;
+    color: var(--text-link--text);
+    text-decoration: none;
+    line-height: var(--text-link--line-height);
+    box-shadow: inset 0 -0.1em 0 0 var(--text-link--border);
+
+    &:hover {
+        color: var(--text-link--text-hover);
+        box-shadow: inset 0 -0.15em 0 0 var(--text-link--border-hover);
+    }
+}
+
+/* custom version of text-link for iubenda integration adding important */
+@mixin iub-text-link {
+    display: inline-block !important;
+    color: var(--text-link--text) !important;
+    font-weight: var(--font--primary-medium) !important;
+    text-decoration: none !important;
+    line-height: var(--text-link--line-height) !important;
+    box-shadow: inset 0 -1px 0 0 var(--text-link--border) !important;
+
+    &:hover {
+        color: var(--text-link--text-hover) !important;
+        box-shadow: inset 0 -2px 0 0 var(--text-link--border-hover) !important;
+    }
+}
+
+/* simple version of text-link for iubenda integration */
+@mixin iub-text-link-simple {
+    color: var(--text-link--text) !important;
+    font-weight: var(--font--primary-medium) !important;
+
+    &:hover {
+        color: var(--text-link--text-hover) !important;
+    }
+}
+
+/* custom button for iubenda integration */
+@mixin iub-button {
+    position: relative !important;
+    padding: 0.75em 1.5em !important;
+    justify-content: center !important;
+    border: var(--button--border-width) solid var(--swatch--medium) !important;
+    border-radius: var(--button--radius) !important;
+    background-color: transparent !important;
+    color: var(--theme--text) !important;
+    font-weight: var(--button--font-weight) !important;
+    line-height: var(--button--line-height) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    font-size: var(--iub-font-size) !important;
+    box-shadow: none !important;
+
+    &:hover {
+        border-color: var(--button--border-hover) !important;
+        background-color: var(--button--background-hover) !important;
+        color: var(--button--text-hover) !important;
+    }
+
+}

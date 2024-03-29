@@ -1,0 +1,222 @@
+// Import variables
+@use "../base" as *;
+
+/* Buttons */
+// .button {
+//     &:hover {
+//         .button_icon {
+//             opacity: 1;
+//         }
+//     }
+// }
+
+/* button sizes */
+[data-button-size="small"] {
+    font-size: .875rem;
+}
+[data-button-size="large"] {
+    font-size: 1.25rem;
+}
+
+
+/* Text Links */
+h1, h2, h3, h4, h5, h6, p, blockquote, cite, figcaption, li, [class*="notification"], .form_main_label {
+    a {
+        @include text-link;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    a {
+        line-height: inherit;
+    }
+}
+
+/* theme & link transitions */
+body,
+a,
+section,
+.button,
+.button-text,
+.button-icon,
+[class*="link"],
+[class*="nav_menu_item"],
+[class*="card"],
+.iub-btn,
+#iubFooterBtnContainer button,
+#themeToggle .navbar_menu_icon path,
+.navbar_toggle .navbar_toggle_icon_line {
+    transition-property: background-color, border-color, box-shadow, border-radius, opacity;
+    transition-duration: 300ms;
+}
+
+/* default rich text font styles */
+.w-richtext,
+.rich-text {
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;   
+    }
+
+    h1, h2, h3, h4, h5, h6 { 
+        margin-top:  var(--size--2rem);
+        margin-bottom: var(--size--1-25rem);
+    }
+
+    p, ol, ul { 
+        margin-top: 0;
+        margin-bottom: var(--size--1rem);
+    }
+
+    figure,
+    blockquote {
+        margin-top: var(--size--2rem);
+        margin-bottom: var(--size--2rem);        
+    }
+
+    h1 {
+        font-size: var(--h2--font-size);
+    }
+    h2 {
+        font-size: var(--h3--font-size);
+    }
+    h3 {
+        font-size: var(--h4--font-size);
+    }
+    h4 {
+        font-size: var(--h5--font-size);
+    }
+
+}
+
+/* Scroll Anchor Defaults */
+[class*="scroll_anchor"] {
+    position: relative;
+    top: calc(var(--navbar--height) * -1);
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+/* Map iFrame Embed */
+.map_embed {
+    iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+  
+// Hide Utilities 
+.hide {
+    display: none !important; 
+}
+.hide-tablet {
+    @include tablet-down {
+        display: none !important;
+    }
+}
+.hide-landscape {
+    @include landscape-down {
+        display: none !important;
+    }
+}
+.hide-portrait {
+    @include portrait {
+        display: none !important;
+    }
+}
+
+
+
+/* lightbox backdrop color */
+.w-lightbox-backdrop {
+    background: var(--theme--overlay-lightbox);
+}
+
+// Helper to resize recaptcha on small screens
+.recaptcha {
+    @media screen and (max-width: 350px) {
+        transform: scale(0.77);
+        -webkit-transform: scale(0.77);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+}
+
+
+
+
+
+
+
+/* selection colors */
+*::selection {
+    background: var(--theme--text-highlight);
+    color: var(--theme--background-highlight);
+}
+
+/* theme toggle icon  */
+#themeToggle {
+
+    #outer {} 
+
+    #dark {
+        opacity: 0;
+    }
+
+    #light {}
+
+    &:hover {
+        .navbar_menu_icon {
+            color: var(--button--background-hover);
+        }
+
+        #light {
+            opacity: 0;
+        }
+
+        #dark {
+            opacity: 1;
+        }
+    }
+
+}
+/* theme dark */
+[data-theme="dark"],
+[data-theme="invert"],
+[data-theme="light"] [data-theme="invert"] {
+
+	/* eCommerce dark momde fix for stripe inputs */
+	.StripeElement {
+        filter: invert(1);
+    }
+
+     /* theme toggle icon  */
+     #themeToggle {    
+        #dark {
+            opacity: 1;
+        }
+
+        #light {
+            opacity: 0;
+        }
+
+        &:hover {
+            #dark {
+                opacity: 0;
+            }
+
+            #light {
+                opacity: 1;
+            }
+        }
+    }
+}

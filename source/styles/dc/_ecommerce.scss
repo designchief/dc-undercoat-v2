@@ -1,0 +1,110 @@
+// Import variables
+@use "../base" as *;
+
+/* eCommerce Checkout Wrap */
+.w-commerce-commercecheckoutformcontainer {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* eCommerce Checkout Container */
+.w-commerce-commercelayoutcontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-column-gap: var(--space--2, 2rem);
+    grid-row-gap: var(--space--2, 2rem);
+
+    @include landscape-down {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: stretch;
+    }
+}
+
+/* eCommerce Checkout Main Section */
+.w-commerce-commercelayoutmain {
+    margin-right: 0px !important;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+/* eCommerce Checkout Sidebar */
+.w-commerce-commercelayoutsidebar {
+    top: 8rem;
+    flex-basis: 320px;
+
+    @include tablet-down {
+        top: 5.7rem;
+        flex-basis: 280px;
+    }
+
+    @include landscape-down {
+        position: static;
+        top: 0rem;
+        height: auto;
+        max-height: none;
+        min-height: auto;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+}
+
+.w-commerce-commercelayoutmain,
+.w-commerce-commercelayoutsidebar {
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: var(--space--2, 2rem);
+    grid-row-gap: var(--space--2, 2rem);
+}
+
+/* eCommerce Checkout Form Blocks */
+// Customer Info
+.w-commerce-commercecheckoutcustomerinfowrapper,
+// Shipping Address
+.w-commerce-commercecheckoutshippingaddresswrapper,
+// Shipping Method
+.w-commerce-commercecheckoutshippingmethodswrapper,
+// Payment Info
+.w-commerce-commercecheckoutpaymentinfowrapper,
+// Billing Address
+.w-commerce-commercecheckoutbillingaddresswrapper,
+// Items in Order
+.w-commerce-commercecheckoutorderitemswrapper,
+// Order Summary
+.w-commerce-commercecheckoutordersummarywrapper,
+/* eCommerce Order Confirmation Form Blocks */
+// Customer Summary
+.w-commerce-commercecheckoutcustomerinfosummarywrapper,
+// Shipping Summary
+.w-commerce-commercecheckoutshippingsummarywrapper,
+// Payment Summary
+.w-commerce-commercecheckoutpaymentsummarywrapper {
+    margin: 0;
+    border-radius: var(--card--radius, 1.25rem);
+    overflow: hidden;
+    background-color: var(--theme--background-highlight, white);
+}
+
+/* eCommerce Checkout Form Header & Content Block */
+.w-commerce-commercecheckoutblockheader,
+.w-commerce-commercecheckoutblockcontent {
+    background-color: transparent;
+    padding: var(--space--1, 1rem) var(--space--1-25, 1.25rem);
+    border-style: none;
+
+}
+
+/* eCommerce Checkout Form Header Block */
+.w-commerce-commercecheckoutblockheader {
+    border-bottom: 1px solid var(--theme--border, #8a8a8a);
+
+}
+
+/* eCommerce Checkout Form Content Block */
+.w-commerce-commercecheckoutblockcontent {
+
+}

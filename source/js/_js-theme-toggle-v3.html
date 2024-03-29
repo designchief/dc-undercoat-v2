@@ -1,0 +1,36 @@
+<!-- DC Theme Toggle v3 - This version uses the system preference or a previous toogle state to define an initial theme and then respects the toggle but also listens to user system changes -->
+<script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Theme switcher script goes here
+        // Select the button
+        const btn = document.querySelector("#themeToggle");
+
+        // Function to update the theme using a data attribute
+        function updateTheme(theme) {
+            // Set the data-theme attribute on the body
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+
+        // Function to apply the initial theme based on website styles
+        function applyInitialTheme() {
+            // Get the initial theme from website styles
+            const initialTheme = getComputedStyle(document.documentElement).getPropertyValue('--initial-theme');
+            updateTheme(initialTheme);
+            // Save the current preference to localStorage
+            localStorage.setItem("theme", initialTheme);
+        }
+
+        // Apply the initial theme when the page loads
+        applyInitialTheme();
+
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+            // Toggle the theme between light and dark
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            updateTheme(newTheme);
+            // Save the current preference to localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+    });
+</script>

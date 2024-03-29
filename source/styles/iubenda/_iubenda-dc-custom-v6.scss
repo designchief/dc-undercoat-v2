@@ -1,0 +1,370 @@
+// Import variables
+@use "../base" as *;
+
+/* == DC Style Iubenda Settings == */
+
+:root {
+    --iub-font-size: 0.875rem;
+    --iub-border: var(--border-width--main) solid var(--theme--border);
+}
+
+/* Fix for iubenda footer link svg */
+[class*="footer_info_link"] {
+    img {
+        margin-bottom: .125em;
+        object-fit: unset;
+    }
+}
+
+
+/* == DC Style Iubenda cookie banner == */
+
+/* Banner full screen wrapper */
+.iubenda-cs-default-floating {
+    background-color: transparent;
+}
+
+/* Banner & Floating preferences button surface */
+.iubenda-cs-content,
+.iubenda-tp-btn {
+    background-color: var(--theme--background);
+    box-shadow: 0 0 12px 0 var(--theme--medium-fade);
+    border: var(--iub-border) !important;
+}
+
+
+/* Banner wrapper */
+.iubenda-cs-content {
+    max-width: 18rem;
+    margin: var(--iubenda--banner-margin);
+    padding: 1rem 1.25rem 0.5rem;
+    border-radius: var(--radius--small);
+
+    @include landscape-down {
+        max-width: 100%;
+    }
+}
+
+/* Banner content wrapper */
+.iubenda-cs-rationale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner text area */
+.iubenda-banner-content {
+    font-size: var(--iub-font-size) !important;
+    line-height: var(--iubenda--banner-line-height) !important;
+
+    // Link inside cookie banner
+    a {
+        @include iub-text-link;
+    }
+}
+
+/* Banner buttons wrapper */
+.iubenda-cs-opt-group {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column-reverse;
+    grid-column-gap: var(--grid-gap--ui);
+    grid-row-gap: var(--grid-gap--ui);
+}
+
+/* Banner Accept and Reject buttons wrapper */
+.iubenda-cs-opt-group-consent {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    grid-column-gap: var(--grid-gap--ui);
+    grid-row-gap: var(--grid-gap--ui);
+
+    @include portrait {
+        flex-direction: column-reverse;
+    }
+
+    /* Banner Accept and Reject buttons */
+    .iubenda-cs-reject-btn,
+    .iubenda-cs-accept-btn {
+        @include iub-button;
+        display: flex !important;
+        width: 100%;
+        border-color: var(--button--border) !important;
+        background-color: var(--button--background) !important;
+        color: var(--button--text) !important;
+    }
+
+
+}
+
+/* Banner Preferences button wrapper */
+.iubenda-cs-opt-group-custom {
+    display: flex;
+    justify-content: space-between;
+
+    // Banner Preferences button
+    .iubenda-cs-customize-btn {
+        padding: .25rem 0rem .5rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        border: 0px none transparent;
+        background-color: transparent;
+        color: var(--swatch--medium);
+        font-size: var(--iub-font-size) !important;
+        font-weight: var(--font--primary-medium);
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--text-link--text-hover);
+        }
+    }
+}
+
+/* Floating Preferences button */
+.iubenda-tp-btn {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: var(--radius--round);
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+
+
+/* == DC Style Iubenda preferences iframe == */
+
+#iubenda-iframe {
+
+    /* iFrame Text Style Overide */
+    * {
+        font-family: var(--font--primary-family) !important;
+    }
+
+    .purposes-content {
+        color: var(--theme--text) !important;
+    }
+
+    padding: var(--padding-horizontal--main) !important;
+
+    /* iFrame Popup wrapper */
+    #iubenda-iframe-popup {
+        height: auto !important;
+        // min-height: 650px !important;
+        max-height: 80svh !important;
+        width: 100% !important;
+        max-width: 50rem !important;
+        margin: var(--padding-horizontal--main) !important;
+        border-radius: var(--radius--main) !important;
+        border: var(--iub-border) !important;
+        overflow: hidden !important;
+
+        button {
+            outline: 0 !important;
+        }
+
+    }
+
+    /* Inline Text Links */
+    .purposes-header-text,
+    .purposes-item-body,
+    .purposes-section-header-text {
+
+        button, a {
+            @include iub-text-link-simple;
+        }
+        
+    }
+
+
+    /* iFrame Backgrounds */
+    #purposes-content-container .purposes-items,
+    .purposes-header,
+    .purposes-content,
+    .iubenda-iframe-footer,
+    .iub-consent-buttons {
+        background-color: var(--theme--background) !important;
+    }
+
+    /* iFrame Preferences Overlay Background */
+    &.iubenda-iframe-visible {
+        background-color: var(--theme--overlay-main) !important;
+    }
+
+    /* iFrame Shadows */
+    #purposes-content-container .purposes-item .purposes-item-header {
+        background: var(--theme--background) !important;
+        // background: linear-gradient(0deg,rgba(255,255,255,0) 0,#fff 15%)!important;
+    }
+
+    .iubenda-modal-navigation:not(.iubenda-modal-navigation-brand) {
+        box-shadow: 0 18px 10px -8px var(--theme--background) !important;
+    }
+
+    .iubenda-iframe-footer {
+        box-shadow: 0 -18px 10px -8px var(--theme--background) !important;
+    }
+
+    /* iFrame Borders */
+    .iub-consent-buttons,
+    #purposes-content-container .purposes-section-header,
+    #purposes-content-container .purposes-item:not(:last-of-type) {
+        border-bottom: var(--iub-border) !important;
+    }
+
+    /* iFrame Toggle switches */
+    .iub-toggle-checkbox input.style1 {
+        background-color: var(--swatch--medium) !important;
+
+        &:checked {
+            background-color: var(--swatch--process--success) !important;
+        }
+
+    }
+
+    /* iFrame Buttons */
+    // .purposes-header,
+    // .purposes-buttons {
+
+    // }
+
+    .iub-btn {
+
+        @include iub-button;
+        display: flex !important;
+
+        &.iub-btn-consent {
+            padding-left: 38px !important;
+
+            &.iub-btn-reject {
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 386.667 386.667' height='512px' viewBox='0 0 386.667 386.667' width='512px' class=''%3E%3Cg%3E%3Cpath d='m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z' data-original='%238a8a8a' class='active-path' data-old_color='%238a8a8a' fill='%238a8a8a'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+
+                &:hover {
+                    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 386.667 386.667' height='512px' viewBox='0 0 386.667 386.667' width='512px' class=''%3E%3Cg%3E%3Cpath d='m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z' data-original='%23ffffff' class='active-path' data-old_color='%23ffffff' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+                }
+
+            }
+
+            &.iub-btn-accept {
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 515.556 515.556' height='512px' viewBox='0 0 515.556 515.556' width='512px' class=''%3E%3Cg%3E%3Cpath d='m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z' data-original='%231e1e1e' class='active-path' data-old_color='%231e1e1e' fill='%231e1e1e'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+                background-color: var(--swatch--process--success) !important;
+                color: var(--swatch--dark-2) !important;
+                border-color: var(--swatch--process--success) !important;
+
+                &:hover {
+                    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 515.556 515.556' height='512px' viewBox='0 0 515.556 515.556' width='512px' class=''%3E%3Cg%3E%3Cpath d='m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z' data-original='%23ffffff' class='active-path' data-old_color='%23ffffff' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+                    border-color: var(--button--border-hover) !important;
+                    background-color: var(--button--background-hover) !important;
+                    color: var(--button--text-hover) !important;
+                }
+            }
+        }
+
+        &.iub-btn-stroked {}
+
+    }
+    
+
+
+
+    #iubFooterBtnContainer {
+        display: flex !important;
+
+        #iubRejectBtn,
+        #iubFooterBtn {
+            @include iub-button;
+            font-size: 1rem !important;
+            border-color: var(--button--border) !important;
+            background-color: var(--button--background) !important;
+            color: var(--button--text) !important;
+
+            // &:hover {
+            //     border-color: var(--button--border-hover) !important;
+            //     background-color: var(--button--background-hover) !important;
+            //     color: var(--swatch--white) !important;
+            // }
+
+        }
+
+        #iubFooterBtn {
+            display: flex !important;
+
+        }
+    }
+
+
+
+
+    /* iFrame Body Text */
+    #purposes-content-container {
+
+        .purposes-header .purposes-header-text,
+        .purposes-section-header-text,
+        .purposes-item .purposes-item-body {
+            font-size: var(--iub-font-size) !important;
+            font-weight: var(--font--primary-regular) !important;
+        }
+    }
+
+    /* iFrame Header Text */
+    #purposes-content-container {
+
+        .purposes-header h1.purposes-header-title,
+        .purposes-section-header-title,
+        .purposes-item .purposes-item-title label {
+            font-family: var(--font--secondary-family) !important;
+            font-weight: var(--font--secondary-regular) !important;
+        }
+    }
+
+    /* iFrame Spacing */
+    #purposes-content-container {
+
+        .purposes-header {
+            padding-bottom: 12px !important;
+
+            @media (min-width:800px) {
+                padding: 0px 24px !important;
+            }
+        }
+
+        #purposes-content-container .purposes-header .purposes-header-title .purposes-buttons {
+            @media (max-width:799px) {
+                padding-top: 12px !important;
+                padding-bottom: 24px !important;
+
+            }
+        }
+
+        .purposes-item {
+
+            .purposes-item-body,
+            .purposes-item-title .purposes-item-title-btn {
+                color: var(--theme--text) !important;
+            }
+        }
+    }
+
+
+
+    #purposes-container {
+        .purposes-top {
+            padding-bottom: 12px !important;
+
+            @media (max-width:799px) {
+                padding-bottom: 6px !important;
+            }
+
+        }
+
+    }
+
+}

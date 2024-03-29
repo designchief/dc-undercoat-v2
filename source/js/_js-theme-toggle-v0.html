@@ -1,0 +1,26 @@
+<!-- DC Theme Toggle v4 - This version uses a default theme and then respects the toggle -->
+<script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to update the theme using a data attribute
+        function updateTheme(theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+
+        // Retrieve the theme setting from localStorage
+        const savedTheme = localStorage.getItem("theme");
+
+        // Set the default theme to the saved theme or "light" if not set
+        updateTheme(savedTheme || "light");
+
+        // Listen for clicks on the toggle button
+        const btn = document.querySelector("#themeToggle");
+        btn.addEventListener("click", function() {
+            // Toggle between "light" and "dark" themes
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            updateTheme(newTheme);
+            // Save the user's preference to localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+    });
+</script>

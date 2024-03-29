@@ -1,0 +1,50 @@
+<!-- DC Theme Toggle v2 - This version uses the system preference to begin with and then respects the toggle but also listens to user system changes -->
+<script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Theme switcher script goes here
+        // Select the button
+        const btn = document.querySelector("#themeToggle");
+        // Check for dark mode preference at the OS level
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        // Function to update the theme using a data attribute
+        function updateTheme(theme) {
+            // Set the data-theme attribute on the body
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+
+        // Function to apply the initial theme based on preferences
+        function applyInitialTheme() {
+            // Get the user's theme preference from local storage
+            let currentTheme = localStorage.getItem("theme");
+            // If no stored preference, use system preference
+            if (!currentTheme) {
+                currentTheme = prefersDarkScheme.matches ? "dark" : "light";
+            }
+            updateTheme(currentTheme);
+            // Save the current preference to localStorage
+            localStorage.setItem("theme", currentTheme);
+        }
+
+        // Apply the initial theme when the page loads
+        applyInitialTheme();
+
+        // Listen for changes in system preference
+        prefersDarkScheme.addEventListener("change", function(e) {
+            const newTheme = e.matches ? "dark" : "light";
+            updateTheme(newTheme);
+            // Save the current preference to localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+            // Toggle the theme between light and dark
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            updateTheme(newTheme);
+            // Save the current preference to localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+    });
+</script>
