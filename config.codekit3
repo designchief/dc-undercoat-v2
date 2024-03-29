@@ -25,12 +25,6 @@
       "oAP" : "\/docs\/.gitignore",
       "oF" : 0
     },
-    "\/docs" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/docs\/docs",
-      "oF" : 0
-    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -846,11 +840,11 @@
   },
   "projectAttributes" : {
     "creationDate" : 730290254.68588495,
-    "displayValue" : "dc-undercoat-v1",
+    "displayValue" : "dc-undercoat-v2",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 732377196.59547806
+    "lastBuiltDate" : 733404028.49236298
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

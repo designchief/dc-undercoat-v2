@@ -1,0 +1,24 @@
+<!-- DC Dynamic Copyright Year -->
+<script>
+    // get current year
+    const year = new Date().getFullYear();
+    // set .year's text to current year
+    $('#jsDynamicYear').text(year);
+</script>
+<!-- Iubenda US compliance Check that user is in the US and then show Notice at collection -->
+<script>
+    // Check the user's location
+    fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            // Check if the user is in the US
+            if (data.country_name === 'United States') {
+                // Show the element with ID 'iubendaNac'
+                document.getElementById('iubendaNac').style.display = 'block';
+            } else {
+                // Hide the element with ID 'iubendaNac'
+                document.getElementById('iubendaNac').style.display = 'none';
+            }
+        })
+        .catch(error => console.error(error));
+</script> 

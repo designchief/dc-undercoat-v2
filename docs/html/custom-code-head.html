@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://designchief.github.io/dc-undercoat-v1/styles/dc-styles-external.css" media="all">
+<!-- Iubenda Cookie Script -->
+<style type="text/css">
+    .css {}
+    </style>
+    <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+        "askConsentAtCookiePolicyUpdate":true,
+        "countryDetection":true,
+        "enableLgpd":true,
+        "enableUspr":true,
+        "floatingPreferencesButtonDisplay":"bottom-right",
+        "lang":"en-GB",
+        "lgpdAppliesGlobally":false,
+        "perPurposeConsent":true,
+        "preferenceCookie":{"expireAfter":180},
+        "reloadOnConsent":true,
+        "siteId":1919368,
+        "usprPurposes":"s,sh,adv",
+        "cookiePolicyId":70928247,
+        "cookiePolicyUrl":"https://www.designchief.ie/cookie-policy", 
+        "cookiePolicyInOtherWindow":true,
+        "privacyPolicyUrl":"https://www.designchief.ie/privacy-policy",
+        "banner":{ 
+            "acceptButtonDisplay":true,
+            "applyStyles":false,
+            "closeButtonDisplay":false,
+            "customizeButtonDisplay":true,
+            "explicitWithdrawal":true,
+            "listPurposes":true,
+            "logo":null,
+            "position":"float-bottom-right",
+            "rejectButtonDisplay":true,
+            "content":"DesignChief uses cookies or similar technologies as specified in the %{cookie_policy_link} to make this site work. Hope that’s ok.",
+            "customizeButtonCaption":"Preferences" }};
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/1919368.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<!-- Google tag (gtag.js) -->
+
+<!-- DC Theme Toggle v4 - This version uses a default theme and then respects the toggle -->
+<script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to update the theme using a data attribute
+        function updateTheme(theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+
+        // Retrieve the theme setting from localStorage
+        const savedTheme = localStorage.getItem("theme");
+
+        // Set the default theme to the saved theme or "light" if not set
+        updateTheme(savedTheme || "light");
+
+        // Listen for clicks on the toggle button
+        const btn = document.querySelector("#themeToggle");
+        btn.addEventListener("click", function() {
+            // Toggle between "light" and "dark" themes
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            updateTheme(newTheme);
+            // Save the user's preference to localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+    });
+</script> 
