@@ -6,63 +6,112 @@
 [data-theme="light"],
 [data-theme="dark"] [data-theme="invert"] {
 	--theme--background: var(--swatch--light-1);
-    --theme--background-highlight: var(--swatch--light-2);
-	--theme--text: var(--swatch--dark-2);
-    --theme--text-highlight: var(--swatch--dark-1);
-	--theme--border: var(--swatch--medium-fade);
+    --theme--background-2: var(--swatch--light-2);
+	--theme--background-3: var(--swatch--light-3);
+	--theme--text: var(--swatch--dark-3);
+    --theme--text-2: var(--swatch--dark-1);
+	--theme--border: var(--swatch--medium-4);
+	--theme--border-2: var(--swatch--medium-3);
 	/* button solid */
 	--button--background: var(--swatch--brand);
-	--button--text: var(--swatch--light-1);
+	--button--text: var(--swatch--brand-text);
 	--button--border: var(--swatch--brand);
 	--button--background-hover: var(--swatch--dark-1);
 	--button--text-hover: var(--swatch--light-1);
 	--button--border-hover: var(--swatch--dark-1);
-	/* button outlined */
-	--button-outlined--background: var(--swatch--transparent);
-	--button-outlined--text: var(--swatch--dark-1);
-	--button-outlined--border: var(--swatch--medium-fade);
-	--button-outlined--background-hover: var(--swatch--brand);
-	--button-outlined--text-hover: var(--swatch--light-1);
-	--button-outlined--border-hover: var(--swatch--brand);
+	/* button secondary */
+	--button-secondary--background: var(--swatch--transparent);
+	--button-secondary--text: var(--swatch--dark-1);
+	--button-secondary--border: var(--swatch--medium-3);
+	--button-secondary--background-hover: var(--swatch--dark-1);
+	--button-secondary--text-hover: var(--swatch--light-1);
+	--button-secondary--border-hover: var(--swatch--dark-1);
 	/* text links */
-	--text-link--text: var(--swatch--dark-1);
-	--text-link--text-hover: var(--swatch--brand);
+	// --text-link--text: var(--swatch--dark-1);
+	// --text-link--text-hover: var(--swatch--brand);
+
+	/* theme toggle icon  */
+	#themeToggle {
+		#dark {
+			opacity: 0;
+		}
+
+		#light {}
+
+		&:hover {
+			// .navbar_menu_icon {
+			// 	color: var(--button--background-hover);
+			// }
+			#light {
+				opacity: 0;
+			}
+			#dark {
+				opacity: 1;
+			}
+		}
+	}
 }
 /* theme dark */
 [data-theme="dark"],
 [data-theme="invert"],
 [data-theme="light"] [data-theme="invert"] {
     --theme--background: var(--swatch--dark-1);
-    --theme--background-highlight: var(--swatch--dark-2);
-	--theme--text: var(--swatch--light-2);
-    --theme--text-highlight: var(--swatch--light-1);
-	--theme--border: var(--swatch--medium-fade);
+    --theme--background-2: var(--swatch--dark-2);
+	--theme--background-3: var(--swatch--dark-3);
+	--theme--text: var(--swatch--light-3);
+	--theme--text-2: var(--swatch--light-1);
+	--theme--border: var(--swatch--medium-4);
+	--theme--border-2: var(--swatch--medium-3);
 	/* button solid */
 	--button--background: var(--swatch--brand);
-	--button--text: var(--swatch--light-1);
+	--button--text: var(--swatch--brand-text);
 	--button--border: var(--swatch--brand);
 	--button--background-hover: var(--swatch--light-1);
 	--button--text-hover: var(--swatch--dark-1);
 	--button--border-hover: var(--swatch--light-1);
-	/* button outlined */
-	--button-outlined--background: var(--swatch--transparent);
-	--button-outlined--text: var(--swatch--light-1);
-	--button-outlined--border: var(--swatch--medium-fade);
-	--button-outlined--background-hover: var(--swatch--brand);
-	--button-outlined--text-hover: var(--swatch--light-1);
-	--button-outlined--border-hover: var(--swatch--brand);
+	/* button secondary */
+	--button-secondary--background: var(--swatch--transparent);
+	--button-secondary--text: var(--swatch--light-1);
+	--button-secondary--border: var(--swatch--medium-3);
+	--button-secondary--background-hover: var(--swatch--light-1);
+	--button-secondary--text-hover: var(--swatch--dark-1);
+	--button-secondary--border-hover: var(--swatch--light-1);
 	/* text links */
-	--text-link--text: var(--swatch--light-1);
-	--text-link--text-hover: var(--swatch--brand);
+	// --text-link--text: var(--swatch--light-1);
+	// --text-link--text-hover: var(--swatch--brand);
+
+	/* theme toggle icon  */
+	#themeToggle {    
+        #dark {
+            opacity: 1;
+        }
+        #light {
+            opacity: 0;
+        }
+        &:hover {
+            #dark {
+                opacity: 0;
+            }
+
+            #light {
+                opacity: 1;
+            }
+        }
+    }
+
+	/* eCommerce dark momde fix for stripe inputs */
+	.StripeElement {
+        filter: invert(1);
+    }
 }
-/* button outlined */
-[data-button-style="outlined"] {
-	--button--background: var(--button-outlined--background);
-	--button--text: var(--button-outlined--text);
-	--button--border: var(--button-outlined--border);
-	--button--background-hover: var(--button-outlined--background-hover);
-	--button--text-hover: var(--button-outlined--text-hover);
-	--button--border-hover: var(--button-outlined--border-hover);
+/* button secondary */
+[data-button-style="secondary"] {
+	--button--background: var(--button-secondary--background);
+	--button--text: var(--button-secondary--text);
+	--button--border: var(--button-secondary--border);
+	--button--background-hover: var(--button-secondary--background-hover);
+	--button--text-hover: var(--button-secondary--text-hover);
+	--button--border-hover: var(--button-secondary--border-hover);
 }
 /* apply colors */
 :is(c, :where([data-theme]:not([data-theme="inherit"]))) {

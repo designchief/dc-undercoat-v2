@@ -4,7 +4,6 @@
 /* == DC Style Iubenda Settings == */
 
 :root {
-    --iub-font-size: 0.875rem;
     --iub-border: var(--border-width--main) solid var(--theme--border);
 }
 
@@ -28,7 +27,7 @@
 .iubenda-cs-content,
 .iubenda-tp-btn {
     background-color: var(--theme--background);
-    box-shadow: 0 0 12px 0 var(--theme--medium-fade);
+    box-shadow: 0 0 12px 0 var(--theme--border);
     border: var(--iub-border) !important;
 }
 
@@ -54,7 +53,7 @@
 
 /* Banner text area */
 .iubenda-banner-content {
-    font-size: var(--iub-font-size) !important;
+    font-size: var(--iubenda--font-size) !important;
     line-height: var(--iubenda--banner-line-height) !important;
 
     // Link inside cookie banner
@@ -69,8 +68,8 @@
     width: 100%;
     margin-top: 1rem;
     flex-direction: column-reverse;
-    grid-column-gap: var(--grid-gap--ui);
-    grid-row-gap: var(--grid-gap--ui);
+    grid-column-gap: var(--space--ui);
+    grid-row-gap: var(--space--ui);
 }
 
 /* Banner Accept and Reject buttons wrapper */
@@ -78,8 +77,8 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    grid-column-gap: var(--grid-gap--ui);
-    grid-row-gap: var(--grid-gap--ui);
+    grid-column-gap: var(--space--ui);
+    grid-row-gap: var(--space--ui);
 
     @include portrait {
         flex-direction: column-reverse;
@@ -113,8 +112,8 @@
         border: 0px none transparent;
         background-color: transparent;
         color: var(--swatch--medium);
-        font-size: var(--iub-font-size) !important;
-        font-weight: var(--font--primary-medium);
+        font-size: var(--iubenda--font-size) !important;
+        font-weight: var(--button--font-weight);
         text-align: center;
         letter-spacing: 0.02em;
         text-transform: uppercase;
@@ -146,7 +145,7 @@
 
     /* iFrame Text Style Overide */
     * {
-        font-family: var(--font--primary-family) !important;
+        font-family: var(--font-family--text) !important;
     }
 
     .purposes-content {
@@ -309,8 +308,8 @@
         .purposes-header .purposes-header-text,
         .purposes-section-header-text,
         .purposes-item .purposes-item-body {
-            font-size: var(--iub-font-size) !important;
-            font-weight: var(--font--primary-regular) !important;
+            font-size: var(--iubenda--font-size) !important;
+            font-weight: var(--font-weight--400) !important;
         }
     }
 
@@ -320,8 +319,8 @@
         .purposes-header h1.purposes-header-title,
         .purposes-section-header-title,
         .purposes-item .purposes-item-title label {
-            font-family: var(--font--secondary-family) !important;
-            font-weight: var(--font--secondary-regular) !important;
+            font-family: var(--font-family--heading) !important;
+            font-weight: var(--font-weight--heading-main) !important;
         }
     }
 

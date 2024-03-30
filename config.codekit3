@@ -25,6 +25,12 @@
       "oAP" : "\/docs\/.gitignore",
       "oF" : 0
     },
+    "\/docs" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/docs\/docs",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -577,6 +583,22 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/source\/styles\/dc-styles-base.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/styles\/dc-styles-base.html",
+      "oF" : 0
+    },
+    "\/source\/styles\/dc-styles-custom.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/styles\/dc-styles-custom.html",
+      "oF" : 0
+    },
     "\/source\/styles\/dc-styles-external.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -607,7 +629,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/source\/styles\/dc\/_custom-lumosv201.scss" : {
+    "\/source\/styles\/dc\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -616,7 +638,22 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/docs\/styles\/dc\/_custom-lumosv201.css",
+      "oAP" : "\/docs\/styles\/dc\/_base.css",
+      "oF" : 0,
+      "oS" : 2,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/source\/styles\/dc\/_custom-lumos.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/styles\/dc\/_custom-lumos.css",
       "oF" : 0,
       "oS" : 2,
       "pg" : 0,
@@ -682,6 +719,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/source\/styles\/dc\/_responsive.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/styles\/dc\/_responsive.css",
+      "oF" : 0,
+      "oS" : 2,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/source\/styles\/dc\/_theme.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -697,7 +749,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/source\/styles\/iubenda\/_iubenda-dc-custom-v6.scss" : {
+    "\/source\/styles\/iubenda\/_iubenda-dc-custom-v7.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -706,7 +758,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/docs\/styles\/iubenda\/_iubenda-dc-custom-v6.css",
+      "oAP" : "\/docs\/styles\/iubenda\/_iubenda-dc-custom-v7.css",
       "oF" : 0,
       "oS" : 2,
       "pg" : 0,
@@ -726,54 +778,6 @@
       "oS" : 2,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/page_code_base.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/page_code_base.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/page_code_layout.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/page_code_layout.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/page_code_typography.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/page_code_typography.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_color.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_color.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_custom.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_custom.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_responsive.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.1\/updated-dc\/page_code_responsive.html",
-      "oF" : 0
     },
     "\/source\/styles\/lumos\/lumos-v2-2.0.2\/page_code_base.html" : {
       "cB" : 0,
@@ -806,30 +810,6 @@
       "oA" : 0,
       "oAP" : "\/docs\/styles\/lumos\/lumos-v2-2.0.2\/page_code_responsive.html",
       "oF" : 0
-    },
-    "\/source\/styles\/page_code_color-dc.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/page_code_color-dc.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/page_code_custom-dc.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/page_code_custom-dc.html",
-      "oF" : 0
-    },
-    "\/source\/styles\/page_code_responsive-dc.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/styles\/page_code_responsive-dc.html",
-      "oF" : 0
     }
   },
   "hooks" : [
@@ -844,7 +824,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 733404028.49236298
+    "lastBuiltDate" : 733512221.28794301
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

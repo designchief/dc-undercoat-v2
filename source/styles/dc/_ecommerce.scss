@@ -13,8 +13,8 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    grid-column-gap: var(--space--2, 2rem);
-    grid-row-gap: var(--space--2, 2rem);
+    grid-column-gap: var(--space--medium);
+    grid-row-gap: var(--space--medium);
 
     @include landscape-down {
         flex-direction: column;
@@ -57,8 +57,8 @@
 .w-commerce-commercelayoutsidebar {
     display: flex;
     flex-direction: column;
-    grid-column-gap: var(--space--2, 2rem);
-    grid-row-gap: var(--space--2, 2rem);
+    grid-column-gap: var(--space--medium);
+    grid-row-gap: var(--space--medium);
 }
 
 /* eCommerce Checkout Form Blocks */
@@ -86,14 +86,14 @@
     margin: 0;
     border-radius: var(--card--radius, 1.25rem);
     overflow: hidden;
-    background-color: var(--theme--background-highlight, white);
+    background-color: var(--theme--background-2, white);
 }
 
 /* eCommerce Checkout Form Header & Content Block */
 .w-commerce-commercecheckoutblockheader,
 .w-commerce-commercecheckoutblockcontent {
     background-color: transparent;
-    padding: var(--space--1, 1rem) var(--space--1-25, 1.25rem);
+    padding: var(--space--main) var(--space--main);
     border-style: none;
 
 }

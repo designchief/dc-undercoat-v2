@@ -16,7 +16,7 @@
 @mixin iub-text-link {
     display: inline-block !important;
     color: var(--text-link--text) !important;
-    font-weight: var(--font--primary-medium) !important;
+    font-weight: var(--button--font-weight) !important;
     text-decoration: none !important;
     line-height: var(--text-link--line-height) !important;
     box-shadow: inset 0 -1px 0 0 var(--text-link--border) !important;
@@ -30,7 +30,7 @@
 /* simple version of text-link for iubenda integration */
 @mixin iub-text-link-simple {
     color: var(--text-link--text) !important;
-    font-weight: var(--font--primary-medium) !important;
+    font-weight: var(--button--font-weight) !important;
 
     &:hover {
         color: var(--text-link--text-hover) !important;
@@ -50,7 +50,7 @@
     line-height: var(--button--line-height) !important;
     text-decoration: none !important;
     cursor: pointer !important;
-    font-size: var(--iub-font-size) !important;
+    font-size: var(--iubenda--font-size) !important;
     box-shadow: none !important;
 
     &:hover {

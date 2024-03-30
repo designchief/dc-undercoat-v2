@@ -1,23 +1,6 @@
 // Import variables
 @use "../base" as *;
 
-// Reset styles
-// textarea, 
-// input {
-//     // -webkit-appearance: none;
-//     box-shadow: none;
-//     background-clip: padding-box;
-// }
-
-/* fix color for webflow elements with default styles */
-// .w-select,
-// .w-input,
-// .w-dropdown-btn, 
-// .w-dropdown-toggle, 
-// .w-dropdown-link {
-//     color: inherit;
-// }
-
 .w-select {
     -webkit-appearance: none;
 }
@@ -25,8 +8,8 @@
 /* Webflow form notiifications */
 .w-form-done,
 .w-form-fail {
-    margin-top: var(--space--small);
-    padding: var(--space--small);
+    margin-top: var(--space--main);
+    padding: var(--space--main);
     border-radius: var(--radius--main);
     text-align: center;
     line-height: 1.3;

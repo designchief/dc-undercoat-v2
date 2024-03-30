@@ -15,7 +15,7 @@
     font-size: .875rem;
 }
 [data-button-size="large"] {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
 }
 
 
@@ -39,7 +39,7 @@ section,
 .button-text,
 .button-icon,
 [class*="link"],
-[class*="nav_menu_item"],
+.u-nav-item,
 [class*="card"],
 .iub-btn,
 #iubFooterBtnContainer button,
@@ -51,7 +51,7 @@ section,
 
 /* default rich text font styles */
 .w-richtext,
-.rich-text {
+.u-rich-text {
 
     > *:first-child {
         margin-top: 0;
@@ -73,21 +73,24 @@ section,
 
     figure,
     blockquote {
-        margin-top: var(--size--2rem);
-        margin-bottom: var(--size--2rem);        
+        margin-top: var(--size--3rem);
+        margin-bottom: var(--size--3rem);        
     }
 
     h1 {
-        font-size: var(--h2--font-size);
+        font-size: var(--font-size--h2);
     }
     h2 {
-        font-size: var(--h3--font-size);
+        font-size: var(--font-size--h3);
     }
     h3 {
-        font-size: var(--h4--font-size);
+        font-size: var(--font-size--h4);
     }
     h4 {
-        font-size: var(--h5--font-size);
+        font-size: var(--font-size--h5);
+    }
+    h5 {
+        font-size: var(--font-size--h6);
     }
 
 }
@@ -158,65 +161,7 @@ section,
 
 
 /* selection colors */
-*::selection {
-    background: var(--theme--text-highlight);
-    color: var(--theme--background-highlight);
-}
-
-/* theme toggle icon  */
-#themeToggle {
-
-    #outer {} 
-
-    #dark {
-        opacity: 0;
-    }
-
-    #light {}
-
-    &:hover {
-        .navbar_menu_icon {
-            color: var(--button--background-hover);
-        }
-
-        #light {
-            opacity: 0;
-        }
-
-        #dark {
-            opacity: 1;
-        }
-    }
-
-}
-/* theme dark */
-[data-theme="dark"],
-[data-theme="invert"],
-[data-theme="light"] [data-theme="invert"] {
-
-	/* eCommerce dark momde fix for stripe inputs */
-	.StripeElement {
-        filter: invert(1);
-    }
-
-     /* theme toggle icon  */
-     #themeToggle {    
-        #dark {
-            opacity: 1;
-        }
-
-        #light {
-            opacity: 0;
-        }
-
-        &:hover {
-            #dark {
-                opacity: 0;
-            }
-
-            #light {
-                opacity: 1;
-            }
-        }
-    }
-}
+// *::selection {
+//     background: var(--theme--text-2);
+//     color: var(--theme--background-2);
+// }
