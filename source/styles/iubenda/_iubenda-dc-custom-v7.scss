@@ -68,8 +68,8 @@
     width: 100%;
     margin-top: 1rem;
     flex-direction: column-reverse;
-    grid-column-gap: var(--space--ui);
-    grid-row-gap: var(--space--ui);
+    grid-column-gap: var(--space--small);
+    grid-row-gap: var(--space--small);
 }
 
 /* Banner Accept and Reject buttons wrapper */
@@ -77,8 +77,8 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    grid-column-gap: var(--space--ui);
-    grid-row-gap: var(--space--ui);
+    grid-column-gap: var(--space--small);
+    grid-row-gap: var(--space--small);
 
     @include portrait {
         flex-direction: column-reverse;
@@ -309,7 +309,7 @@
         .purposes-section-header-text,
         .purposes-item .purposes-item-body {
             font-size: var(--iubenda--font-size) !important;
-            font-weight: var(--font-weight--400) !important;
+            font-weight: var(--font-weight--text-main) !important;
         }
     }
 
