@@ -26,7 +26,7 @@
 /* Banner & Floating preferences button surface */
 .iubenda-cs-content,
 .iubenda-tp-btn {
-    background-color: var(--theme--text);
+    background-color: var(--theme--background-3);
     box-shadow: 0 0 12px 0 var(--theme--border);
     border: var(--iub-border) !important;
 }
@@ -38,7 +38,6 @@
     margin: var(--iubenda--banner-margin);
     padding: 1rem 1.25rem 0.5rem;
     border-radius: var(--radius--small);
-    color: var(--theme--background);
 
     @include landscape-down {
         max-width: 100%;
@@ -69,8 +68,8 @@
     width: 100%;
     margin-top: 1rem;
     flex-direction: column-reverse;
-    grid-column-gap: var(--space--small);
-    grid-row-gap: var(--space--small);
+    grid-column-gap: var(--space--xsmall);
+    grid-row-gap: var(--space--xsmall);
 }
 
 /* Banner Accept and Reject buttons wrapper */

@@ -538,6 +538,17 @@
       "oAP" : "\/docs\/js\/_js-theme-toggle-v3.html",
       "oF" : 0
     },
+    "\/source\/js\/main.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/docs\/js\/main-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/styles\/base\/_breakpoints.scss" : {
       "aP" : 0,
       "bl" : 0,
