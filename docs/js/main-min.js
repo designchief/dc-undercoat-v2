@@ -1,1 +1,1 @@
-document.getElementsByClassName("iubenda-cs-banner").setAttribute("data-theme","invert");
+document.getElementById("iubenda-cs-banner").setAttribute("data-theme","invert");
