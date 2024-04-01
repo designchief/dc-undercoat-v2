@@ -1,0 +1,40 @@
+@function calculateDynamicPart($min-size, $max-size, $breakpoint-min, $breakpoint-max) {
+    // Calculate the slope (change in size over change in viewport width)
+    $slope: calc(($max-size - $min-size) / ($breakpoint-max - $breakpoint-min));
+    // Convert the slope to vw units (1vw = 1% of viewport width)
+    $slope-vw: $slope * 100;
+    // Calculate the base size (y-intercept) at the minimum breakpoint
+    $base-size: $min-size - calc($slope-vw * $breakpoint-min / 100);
+    @return ($base-size, $slope-vw);
+}
+
+// Typography sizes and breakpoints
+$typography-sizes: (
+    "display-2": (max: 8rem, min: 4rem),
+    "display-1": (max: 6.5rem, min: 3.475rem),
+    "h1": (max: 5rem, min: 2.75rem),
+    "h2": (max: 4rem, min: 2.3rem),
+    "h3": (max: 3rem, min: 1.8rem),
+    "h4": (max: 2rem, min: 1.35rem),
+    "h5": (max: 1.5rem, min: 1.175rem),
+    "h6": (max: 1.25rem, min: 1rem),
+    "main-text": (max: 1.2rem, min: 1rem),
+    "small-text": (max: 1rem, min: 0.875rem),
+    "xsmall-text": (max: 0.875rem, min: 0.75rem),
+    "large-text": (max: 1.4rem, min: 1.125rem),
+    "xlarge-text": (max: 1.6rem, min: 1.25rem),
+);
+
+$breakpoint-min: 20rem; // Equivalent to 320px
+$breakpoint-max: 90rem; // Equivalent to 1440px
+
+:root {
+@each $name, $size in $typography-sizes {
+        $min-size: map-get($size, min);
+        $max-size: map-get($size, max);
+        $dynamic-part: calculateDynamicPart($min-size, $max-size, $breakpoint-min, $breakpoint-max);
+
+        // Generate the clamp function with simplified dynamic part
+        --font-size--#{$name}: clamp(#{$min-size}, #{nth($dynamic-part, 1)} + #{nth($dynamic-part, 2)}vw, #{$max-size}); 
+    }
+}

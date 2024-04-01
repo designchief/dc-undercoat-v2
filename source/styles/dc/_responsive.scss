@@ -1,78 +1,65 @@
-// Import variables
-@use "../base" as *;
+@function calculateDynamicPart($min-size, $max-size, $breakpoint-min, $breakpoint-max) {
+    // Calculate the slope (change in size over change in viewport width)
+    $slope: calc(($max-size - $min-size) / ($breakpoint-max - $breakpoint-min));
+    // Convert the slope to vw units (1vw = 1% of viewport width)
+    $slope-vw: $slope * 100;
+    // Calculate the base size (y-intercept) at the minimum breakpoint
+    $base-size: $min-size - calc($slope-vw * $breakpoint-min / 100);
+    @return ($base-size, $slope-vw);
+}
 
-/* desktop */
+// Adaptive sizes and breakpoints
+$adaptive-sizes: (
+	"0-125rem": (max: 0.125rem, min: 0.125rem),
+	"0-25rem": (max: 0.25rem, min: 0.245rem),
+	"0-5rem": (max: 0.5rem, min: 0.48rem),
+	"0-75rem": (max: 0.75rem, min: 0.705rem),
+	"1rem": (max: 1rem, min: 0.92rem),
+	"1-25rem": (max: 1.25rem, min: 1.12rem),
+	"1-5rem": (max: 1.5rem, min: 1.315rem),
+	"2rem": (max: 2rem, min: 1.71rem),
+	"2-5rem": (max: 2.5rem, min: 2.085rem),
+	"3rem": (max: 3rem, min: 2.44rem),
+	"3-5rem": (max: 3.5rem, min: 2.775rem),
+	"4rem": (max: 4rem, min: 3.09rem),
+	"4-5rem": (max: 4.5rem, min: 3.38rem),
+	"5rem": (max: 5rem, min: 3.655rem),
+	"5-5rem": (max: 5.5rem, min: 3.905rem),
+	"6rem": (max: 6rem, min: 4.14rem),
+	"6-5rem": (max: 6.5rem, min: 4.35rem),
+	"7rem": (max: 7rem, min: 4.54rem),
+	"7-5rem": (max: 7.5rem, min: 4.705rem), 
+	"8rem": (max: 8rem, min: 4.855rem),
+	"8-5rem": (max: 8.5rem, min: 4.985rem),
+	"9rem": (max: 9rem, min: 5.09rem),
+	"9-5rem": (max: 9.5rem, min: 5.175rem),
+	"10rem": (max: 10rem, min: 5.24rem),
+	"11rem": (max: 11rem, min: 5.535rem),
+	"12rem": (max: 12rem, min: 5.795rem),
+	"13rem": (max: 13rem, min: 6.005rem),
+	"14rem": (max: 14rem, min: 6.18rem),
+	"15rem": (max: 15rem, min: 6.31rem),
+	"16rem": (max: 16rem, min: 6.4rem),
+);
+
+$breakpoint-min: 20rem; // Equivalent to 320px
+$breakpoint-max: 90rem; // Equivalent to 1440px
+
 :root {
-	/* custom */
-}
-/* tablet */
-@include tablet-down {
-    :root {
-		/* custom */
-        --navbar--height: 4.5rem;
-		--padding-horizontal--main: 2rem;
-		/* adaptive sizes */
-		--size--2rem: 1.75rem;
-		--size--2-5rem: 2.18rem;
-		--size--3rem: 2.52rem;
-		--size--3-5rem: 2.73rem;
-		--size--4rem: 3rem;
-		--size--4-5rem: 3.375rem;
-		--size--5rem: 3.75rem;
-		--size--5-5rem: 4.125rem;
-		--size--6rem: 4.5rem;
-		--size--6-5rem: 4.875rem;
-		--size--7rem: 5.25rem;
-		--size--7-5rem: 5.625rem;
-		--size--8rem: 6rem;
-		--size--8-5rem: 6.375rem;
-		--size--9rem: 6.75rem;
-		--size--9-5rem: 7.125rem;
-		--size--10rem: 7.5rem;
-		--size--11rem: 8.25rem;
-		--size--12rem: 9rem;
-		--size--13rem: 9.75rem;
-		--size--14rem: 10.5rem;
-		--size--15rem: 11.25rem;
-		--size--16rem: 12rem;
-	}
+@each $name, $size in $adaptive-sizes {
+        $min-size: map-get($size, min);
+        $max-size: map-get($size, max);
+        $dynamic-part: calculateDynamicPart($min-size, $max-size, $breakpoint-min, $breakpoint-max);
+
+        // Generate the clamp function with simplified dynamic part
+        --size--#{$name}: clamp(#{$min-size}, #{nth($dynamic-part, 1)} + #{nth($dynamic-part, 2)}vw, #{$max-size});
+    }
 }
 
-/* landscape */
-@include landscape-down {
-    :root {
-		/* custom */
-        --navbar--height: 4rem;
-		--padding-horizontal--main: 1rem;
-		/* adaptive sizes */
-		--size--2-5rem: 2rem;
-		--size--3rem: 2.25rem;
-		--size--3-5rem: 2.375rem;
-		--size--4rem: 2.5rem;
-		--size--4-5rem: 2.75rem;
-		--size--5rem: 3rem;
-		--size--5-5rem: 3.25rem;
-		--size--6rem: 3.5rem;
-		--size--6-5rem: 3.75rem;
-		--size--7rem: 4rem;
-		--size--7-5rem: 4.25rem;
-		--size--8rem: 4.5rem;
-		--size--8-5rem: 4.75rem;
-		--size--9rem: 5rem;
-		--size--9-5rem: 5.25rem;
-		--size--10rem: 5.5rem;
-		--size--11rem: 5.75rem;
-		--size--12rem: 6rem;
-		--size--13rem: 6.5rem;
-		--size--14rem: 7rem;
-		--size--15rem: 7.5rem;
-		--size--16rem: 8rem;
-	}
-}
 
-/* portrait */
-@include portrait {
-    :root {
-		/* custom */
-	}
+/* element sizes */
+:root {
+	--navbar--height: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+	--padding-horizontal--main: clamp(1rem, 0.4286rem + 2.8571vw, 3rem);
+	--card--padding: clamp(1rem, 0.7857rem + 1.0714vw, 1.75rem);
 }

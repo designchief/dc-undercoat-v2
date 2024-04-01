@@ -5,10 +5,10 @@
 :root,
 [data-theme="light"],
 [data-theme="dark"] [data-theme="invert"] {
-	--theme--background: var(--swatch--light-1);
+	--theme--background: var(--swatch--light-3);
     --theme--background-2: var(--swatch--light-2);
-	--theme--background-3: var(--swatch--light-3);
-	--theme--text: var(--swatch--dark-3);
+	--theme--background-3: var(--swatch--light-1);
+	--theme--text: var(--swatch--dark-4);
     --theme--text-2: var(--swatch--dark-1);
 	--theme--border: var(--swatch--medium-4);
 	--theme--border-2: var(--swatch--medium-3);
@@ -26,6 +26,8 @@
 	--button-secondary--background-hover: var(--swatch--dark-1);
 	--button-secondary--text-hover: var(--swatch--light-1);
 	--button-secondary--border-hover: var(--swatch--dark-1);
+	/* Navbar */
+	--navbar--background: var(--swatch--light-1);
 	/* text links */
 	// --text-link--text: var(--swatch--dark-1);
 	// --text-link--text-hover: var(--swatch--brand);
@@ -58,7 +60,7 @@
     --theme--background: var(--swatch--dark-1);
     --theme--background-2: var(--swatch--dark-2);
 	--theme--background-3: var(--swatch--dark-3);
-	--theme--text: var(--swatch--light-3);
+	--theme--text: var(--swatch--light-4);
 	--theme--text-2: var(--swatch--light-1);
 	--theme--border: var(--swatch--medium-4);
 	--theme--border-2: var(--swatch--medium-3);
@@ -76,6 +78,8 @@
 	--button-secondary--background-hover: var(--swatch--light-1);
 	--button-secondary--text-hover: var(--swatch--dark-1);
 	--button-secondary--border-hover: var(--swatch--light-1);
+	/* Navbar */
+	--navbar--background: var(--swatch--dark-1);
 	/* text links */
 	// --text-link--text: var(--swatch--light-1);
 	// --text-link--text-hover: var(--swatch--brand);

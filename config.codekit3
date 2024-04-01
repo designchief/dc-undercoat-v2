@@ -729,7 +729,7 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/docs\/styles\/dc\/_responsive.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 2,
       "pg" : 0,
       "sct" : 0
@@ -744,7 +744,22 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/docs\/styles\/dc\/_theme.css",
-      "oF" : 0,
+      "oF" : 1,
+      "oS" : 2,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/source\/styles\/dc\/_type.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/styles\/dc\/_type.css",
+      "oF" : 1,
       "oS" : 2,
       "pg" : 0,
       "sct" : 0
@@ -824,7 +839,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 733512221.28794301
+    "lastBuiltDate" : 733661009.91835403
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
