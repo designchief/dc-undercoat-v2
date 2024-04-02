@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="https://designchief.github.io/dc-undercoat-v2/styles/dc-styles-external.css" media="all">
 <style type="text/css">
     .css {}
     </style>
@@ -9,29 +8,3 @@
     <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/1919368.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-<!-- DC Theme Toggle v4 - This version uses a default theme and then respects the toggle -->
-<script defer>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Function to update the theme using a data attribute
-        function updateTheme(theme) {
-            document.documentElement.setAttribute("data-theme", theme);
-        }
-
-        // Retrieve the theme setting from localStorage
-        const savedTheme = localStorage.getItem("theme");
-
-        // Set the default theme to the saved theme or "light" if not set
-        updateTheme(savedTheme || "light");
-
-        // Listen for clicks on the toggle button
-        const btn = document.querySelector("#themeToggle");
-        btn.addEventListener("click", function() {
-            // Toggle between "light" and "dark" themes
-            const currentTheme = document.documentElement.getAttribute("data-theme");
-            const newTheme = currentTheme === "light" ? "dark" : "light";
-            updateTheme(newTheme);
-            // Save the user's preference to localStorage
-            localStorage.setItem("theme", newTheme);
-        });
-    });
-</script> 

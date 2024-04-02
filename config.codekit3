@@ -466,6 +466,22 @@
       "plM" : 52797496090591,
       "prP" : 0
     },
+    "\/source\/iubenda\/_js-iubenda-cookie-script-links.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script-links.html",
+      "oF" : 0
+    },
+    "\/source\/iubenda\/_js-iubenda-cookie-script-v2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script-v2.html",
+      "oF" : 0
+    },
     "\/source\/iubenda\/_js-iubenda-cookie-script.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -489,6 +505,22 @@
       "oA" : 0,
       "oAP" : "\/docs\/iubenda\/contact-details.html",
       "oF" : 0
+    },
+    "\/source\/iubenda\/iubenda-custom-banner-v2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 1,
+      "oA" : 0,
+      "oAP" : "\/docs\/iubenda\/iubenda-custom-banner-v2.html",
+      "oF" : 0
+    },
+    "\/source\/iubenda\/iubenda-custom-banner.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 1,
+      "oA" : 0,
+      "oAP" : "\/docs\/iubenda\/iubenda-custom-banner.html",
+      "oF" : 1
     },
     "\/source\/js\/_js-dynamic-year.html" : {
       "cB" : 0,
@@ -785,6 +817,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/docs\/styles\/iubenda\/_iubenda-dc-custom-v7.css",
+      "oF" : 0,
+      "oS" : 2,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/source\/styles\/iubenda\/_iubenda-dc-custom-v8.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/styles\/iubenda\/_iubenda-dc-custom-v8.css",
       "oF" : 0,
       "oS" : 2,
       "pg" : 0,
