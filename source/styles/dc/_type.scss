@@ -1,3 +1,6 @@
+// Import variables
+@use "../base" as *;
+
 @function calculateDynamicPart($min-size, $max-size, $breakpoint-min, $breakpoint-max) {
     // Calculate the slope (change in size over change in viewport width)
     $slope: calc(($max-size - $min-size) / ($breakpoint-max - $breakpoint-min));
@@ -22,7 +25,7 @@ $typography-sizes: (
     "small-text": (max: 1rem, min: 0.875rem),
     "xsmall-text": (max: 0.875rem, min: 0.75rem),
     "large-text": (max: 1.4rem, min: 1.125rem),
-    "xlarge-text": (max: 1.6rem, min: 1.25rem),
+    "xlarge-text": (max: 1.6rem, min: 1.25rem), 
 );
 
 $breakpoint-min: 20rem; // Equivalent to 320px
@@ -37,4 +40,81 @@ $breakpoint-max: 90rem; // Equivalent to 1440px
         // Generate the clamp function with simplified dynamic part
         --font-size--#{$name}: clamp(#{$min-size}, #{nth($dynamic-part, 1)} + #{nth($dynamic-part, 2)}vw, #{$max-size}); 
     }
+}
+ 
+
+/* Text Links */
+h1, h2, h3, h4, h5, h6, p, blockquote, cite, figcaption, li, [class*="notification"], .form_main_label {
+    a {
+        @include text-link;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    a {
+        line-height: inherit;
+    }
+}
+
+/* theme & link transitions */
+body,
+a,
+section,
+.button,
+.button-text,
+.button-icon,
+[class*="link"],
+.u-nav-item,
+[class*="card"],
+.iub-btn,
+#iubFooterBtnContainer button,
+#themeToggle .navbar_menu_icon path,
+.navbar_toggle .navbar_toggle_icon_line {
+    transition-property: background-color, border-color, box-shadow, border-radius, opacity;
+    transition-duration: 300ms;
+}
+
+/* default rich text font styles */
+.w-richtext,
+.u-rich-text {
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;   
+    }
+
+    h1, h2, h3, h4, h5, h6 { 
+        margin-top:  var(--size--2rem);
+        margin-bottom: var(--size--1-25rem);
+    }
+
+    p, ol, ul { 
+        margin-top: 0;
+        margin-bottom: var(--size--1rem);
+    }
+
+    figure,
+    blockquote {
+        margin-top: var(--size--3rem);
+        margin-bottom: var(--size--3rem);        
+    }
+
+    h1 {
+        font-size: var(--font-size--h2);
+    }
+    h2 {
+        font-size: var(--font-size--h3);
+    }
+    h3 {
+        font-size: var(--font-size--h4);
+    }
+    h4 {
+        font-size: var(--font-size--h5);
+    }
+    h5 {
+        font-size: var(--font-size--h6);
+    }
+
 }

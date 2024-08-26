@@ -1,6 +1,25 @@
 // Import variables
 @use "../base" as *;
 
+
+/* Buttons */
+// .button {
+//     &:hover {
+//         .button_icon {
+//             opacity: 1;
+//         }
+//     }
+// }
+
+/* button sizes */
+[data-button-size="small"] {
+    font-size: .875rem;
+}
+[data-button-size="large"] {
+    font-size: 1.375rem;
+}
+
+
 .w-select {
     -webkit-appearance: none;
 }
