@@ -2,9 +2,16 @@
 @use "../base" as *;
 
 /* eCommerce Checkout Wrap */
-.w-commerce-commercecheckoutformcontainer {
+[class*="checkoutformcontainer"],
+.w-commerce-commerceorderconfirmationcontainer {
     background-color: transparent;
     padding: 0;
+
+    
+
+    img {
+        height: auto;
+    }
 }
 
 /* eCommerce Checkout Container */
@@ -15,6 +22,8 @@
     align-items: flex-start;
     grid-column-gap: var(--space--medium);
     grid-row-gap: var(--space--medium);
+    padding: var(--padding-vertical--small) var(--padding-horizontal--main) var(--padding-vertical--main);
+    max-width: var(--max-width--medium);
 
     @include landscape-down {
         flex-direction: column;
@@ -82,16 +91,21 @@
 // Shipping Summary
 .w-commerce-commercecheckoutshippingsummarywrapper,
 // Payment Summary
-.w-commerce-commercecheckoutpaymentsummarywrapper {
+.w-commerce-commercecheckoutpaymentsummarywrapper,
+// Discount Block
+.w-commerce-commercecheckoutdiscounts {
     margin: 0;
     border-radius: var(--card--radius, 1.25rem);
     overflow: hidden;
     background-color: var(--theme--background-2, white);
+    border-style: none;
 }
 
 /* eCommerce Checkout Form Header & Content Block */
 .w-commerce-commercecheckoutblockheader,
-.w-commerce-commercecheckoutblockcontent {
+.w-commerce-commercecheckoutsummaryblockheader,
+.w-commerce-commercecheckoutblockcontent,
+.w-commerce-commercecheckoutshippingmethodslist {
     background-color: transparent;
     padding: var(--space--main) var(--space--main);
     border-style: none;
@@ -99,12 +113,120 @@
 }
 
 /* eCommerce Checkout Form Header Block */
-.w-commerce-commercecheckoutblockheader {
-    border-bottom: 1px solid var(--theme--border, #8a8a8a);
+.w-commerce-commercecheckoutblockheader,
+.w-commerce-commercecheckoutsummaryblockheader, {
+    border-bottom: 1px solid var(--theme--border);
+    font-size: var(--font-size--small-text);
+
+
+
+    h2 {
+        font-size: var(--font-size--h5);
+        line-height: var(--line-height--1-1em);
+    }
+
+    
 
 }
 
 /* eCommerce Checkout Form Content Block */
 .w-commerce-commercecheckoutblockcontent {
 
+}
+
+/* Shipping Methods list */
+.w-commerce-commercecheckoutshippingmethodslist {
+    label {
+        background-color: transparent;
+        padding: 0px;
+        border-style: none;
+        align-items: center;
+    }
+}
+
+/* eCommerce Checkout Form Labels */
+.w-commerce-commercecheckoutlabel {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--small-text);
+    line-height: var(--line-height--1-3em);
+    font-weight: var(--font-weight--heading-main);
+    margin-bottom: var(--space--xsmall);
+}
+
+fieldset,
+.w-commerce-commercecheckoutdiscounts {
+    input[type="text"],
+    [class*="selector"] {
+        height: 3rem;
+        margin-bottom: var(--space--small);
+        padding: 0.35rem var(--space--small) 0.25rem;
+        border: solid var(--border-width--main) var(--theme--border);
+        border-radius: var(--radius--small);
+        background-color: var(--theme--background-3);
+        color: var(--theme--text);
+        font-size: var(--font-size--main-text);
+        line-height: var(--line-height--1-3em);
+        font-weight: var(--font-weight--text-main);
+
+        &:focus {
+            border-color: var(--swatch--medium);
+        }
+
+        &:placeholder {
+            color: var(--swatch--medium);
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0px var(--space--small) 0px 0px;
+        border: solid var(--border-width--main) var(--theme--border);
+        background-color: var(--theme--background-3);
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        outline: none;
+        box-shadow: none;
+
+        &:focus {
+            border-color: var(--swatch--medium);
+            box-shadow: none;
+        }
+
+        &:checked {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-color: var(--swatch--process--success);
+            background-color: var(--swatch--process--success);
+
+        }
+    }
+
+    input[type="checkbox"] {
+        border-radius: var(--radius--small);
+
+        &:checked {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-color: var(--swatch--process--success);
+            background-color: var(--swatch--process--success);
+
+        }
+    }
+
+
+}
+
+/* eCommerce Discount Block */
+.w-commerce-commercecheckoutdiscounts {
+    padding: var(--space--main) var(--space--main);
+}
+.w-commerce-commercecheckoutdiscountslabel {
+    font-size: var(--font-size--h5);
+    line-height: var(--line-height--1-1em);
+    font-family: var(--font-family--heading);
+    font-weight: var(--font-weight--heading-main);
+    margin-bottom: var(--space--main);
 }
