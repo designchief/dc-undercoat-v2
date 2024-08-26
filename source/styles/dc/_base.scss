@@ -77,3 +77,88 @@ section, header, footer {
 .u-line-clamp-3 { -webkit-line-clamp: 3; }
 .u-line-clamp-4 { -webkit-line-clamp: 4; }
 
+// Hide Utilities 
+.u-hide {
+    display: none !important; 
+}
+.u-hide-tablet {
+    @include tablet-down {
+        display: none !important;
+    }
+}
+.u-hide-landscape {
+    @include landscape-down {
+        display: none !important;
+    }
+}
+.u-hide-portrait {
+    @include portrait {
+        display: none !important;
+    }
+}
+
+
+// SVG Icon setup
+.u-icon,
+.button_icon,
+.button-text_icon,
+.button-icon_icon,
+.styleguide_icon_list {
+    svg * {
+        vector-effect: non-scaling-stroke;
+        stroke-width: var(--svg-stroke-width--main);
+    }
+}
+.styleguide_icon_list {
+    svg {
+        width: 2rem !important;
+    }
+}
+
+/* Scroll Anchor Defaults */
+.u-scroll-anchor {
+    position: relative;
+    top: calc(var(--navbar--height) * -1);
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+/* Map iFrame Embed */
+.u-map-embed {
+    iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* lightbox backdrop color */
+.w-lightbox-backdrop {
+    background: var(--theme--overlay-lightbox);
+}
+
+// Helper to resize recaptcha on small screens
+.recaptcha {
+    @media screen and (max-width: 350px) {
+        transform: scale(0.77);
+        -webkit-transform: scale(0.77);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+}
+
+/* webflow slider */
+.w-slider-dot {
+    color: currentColor;
+    background-color: currentColor !important;
+    opacity: 40%;
+
+    &.w-active {
+        opacity: 100%;
+    }
+}
