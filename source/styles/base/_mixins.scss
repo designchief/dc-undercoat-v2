@@ -1,3 +1,68 @@
+/* Text styles matching styles setup in webflow */
+@mixin u-text-display-2 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--display-2);
+    line-height: var(--line-height--1em);
+    letter-spacing: var(--letter-spacing--0-02em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-display-1 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--display-1);
+    line-height: var(--line-height--1em);
+    letter-spacing: var(--letter-spacing--0-02em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h1 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h1);
+    line-height: var(--line-height--1em);
+    letter-spacing: var(--letter-spacing--0-02em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h2 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h2);
+    line-height: var(--line-height--1-1em);
+    letter-spacing: var(--letter-spacing--0-02em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h3 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h3);
+    line-height: var(--line-height--1-1em);
+    letter-spacing: var(--letter-spacing--0-02em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h4 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h4);
+    line-height: var(--line-height--1-1em);
+    letter-spacing: var(--letter-spacing--0em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h5 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h5);
+    line-height: var(--line-height--1-3em);
+    letter-spacing: var(--letter-spacing--0em);
+    font-weight: var(--font-weight--heading-main);
+}
+
+@mixin u-text-h6 {
+    font-family: var(--font-family--heading);
+    font-size: var(--font-size--h6);
+    line-height: var(--line-height--1-3em);
+    letter-spacing: var(--letter-spacing--0em);
+    font-weight: var(--font-weight--heading-main);
+}
+
 /* body link styles - webflow cannot set box-shadow size in ems */
 @mixin text-link {
     display: inline-block;
@@ -10,7 +75,7 @@
         color: var(--text-link--text-hover);
         box-shadow: inset 0 -0.15em 0 0 var(--text-link--border-hover);
     }
-}
+} 
 
 /* custom version of text-link for iubenda integration adding important */
 @mixin iub-text-link {

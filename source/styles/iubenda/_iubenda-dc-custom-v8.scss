@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column-gap: var(--space--small);
+    grid-column-gap: var(--space--3);
 }
 
 /* Banner text area */
@@ -69,8 +69,8 @@
     width: 100%;
     margin-top: 1rem;
     flex-direction: column;
-    grid-column-gap: var(--space--small);
-    grid-row-gap: var(--space--small);
+    grid-column-gap: var(--space--3);
+    grid-row-gap: var(--space--3);
 }
 
 /* Banner Accept and Reject buttons wrapper */
@@ -78,8 +78,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    grid-column-gap: var(--space--small);
-    grid-row-gap: var(--space--small);
+    grid-column-gap: var(--space--3);
+    grid-row-gap: var(--space--3);
 
     @include portrait {
         flex-direction: column;

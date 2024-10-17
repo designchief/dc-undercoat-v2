@@ -11,12 +11,19 @@
 //     }
 // }
 
+button {
+    background-color: unset;
+    padding: unset;
+    text-align: inherit;
+    cursor: pointer;
+}
+
 /* button sizes */
 [data-button-size="small"] {
-    font-size: .875rem;
+    font-size: var(--font-size--small-text);
 }
 [data-button-size="large"] {
-    font-size: 1.375rem;
+    font-size: var(--font-size--xlarge-text);
 }
 
 
@@ -27,8 +34,8 @@
 /* Webflow form notiifications */
 .w-form-done,
 .w-form-fail {
-    margin-top: var(--space--main);
-    padding: var(--space--main);
+    margin-top: var(--space--5);
+    padding: var(--space--5);
     border-radius: var(--radius--main);
     text-align: center;
     line-height: 1.3;
@@ -40,4 +47,18 @@
 .w-form-fail {
     border: var(--border-width--main) solid var(--swatch--process--alert);
     background-color: var(--swatch--process--alert-fade);
+}
+
+/* Lumos Focus states */
+[tabindex]:focus-visible,
+a:focus-visible,
+button:focus-visible,
+.w-checkbox-input--inputType-custom.w--redirected-focus,
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+    outline: 0.125rem solid var(--theme--border);
+    outline-offset: 0.125rem;
+}
+.w-checkbox-input--inputType-custom.w--redirected-focus,
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+    box-shadow: none;
 }

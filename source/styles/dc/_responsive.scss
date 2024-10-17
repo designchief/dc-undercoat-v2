@@ -60,6 +60,7 @@ $breakpoint-max: 90rem; // Equivalent to 1440px
 /* element sizes */
 :root {
 	--navbar--height: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
-	--padding-horizontal--main: clamp(1rem, 0.4286rem + 2.8571vw, 3rem);
+	--site--margin: clamp(1rem, 0.4286rem + 2.8571vw, 3rem);
+	// --site--gutter: clamp(1rem, 0.714rem + 1.429vw, 2rem);
 	--card--padding: clamp(1rem, 0.7857rem + 1.0714vw, 1.75rem);
 }

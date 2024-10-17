@@ -20,10 +20,10 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    grid-column-gap: var(--space--medium);
-    grid-row-gap: var(--space--medium);
-    padding: var(--padding-vertical--small) var(--padding-horizontal--main) var(--padding-vertical--main);
-    max-width: var(--max-width--medium);
+    grid-column-gap: var(--space--6);
+    grid-row-gap: var(--space--6);
+    padding: var(--section-space--small) var(--site--margin) var(--section-space--main);
+    max-width: var(--container--small);
 
     @include landscape-down {
         flex-direction: column;
@@ -66,8 +66,8 @@
 .w-commerce-commercelayoutsidebar {
     display: flex;
     flex-direction: column;
-    grid-column-gap: var(--space--medium);
-    grid-row-gap: var(--space--medium);
+    grid-column-gap: var(--space--6);
+    grid-row-gap: var(--space--6);
 }
 
 /* eCommerce Checkout Form Blocks */
@@ -107,7 +107,7 @@
 .w-commerce-commercecheckoutblockcontent,
 .w-commerce-commercecheckoutshippingmethodslist {
     background-color: transparent;
-    padding: var(--space--main) var(--space--main);
+    padding: var(--space--5) var(--space--5);
     border-style: none;
 
 }
@@ -150,7 +150,7 @@
     font-size: var(--font-size--small-text);
     line-height: var(--line-height--1-3em);
     font-weight: var(--font-weight--heading-main);
-    margin-bottom: var(--space--xsmall);
+    margin-bottom: var(--space--2);
 }
 
 fieldset,
@@ -158,8 +158,8 @@ fieldset,
     input[type="text"],
     [class*="selector"] {
         height: 3rem;
-        margin-bottom: var(--space--small);
-        padding: 0.35rem var(--space--small) 0.25rem;
+        margin-bottom: var(--space--3);
+        padding: 0.35rem var(--space--3) 0.25rem;
         border: solid var(--border-width--main) var(--theme--border);
         border-radius: var(--radius--small);
         background-color: var(--theme--background-3);
@@ -181,7 +181,7 @@ fieldset,
     input[type="radio"] {
         width: 1.5rem;
         height: 1.5rem;
-        margin: 0px var(--space--small) 0px 0px;
+        margin: 0px var(--space--3) 0px 0px;
         border: solid var(--border-width--main) var(--theme--border);
         background-color: var(--theme--background-3);
         flex-grow: 0;
@@ -221,12 +221,12 @@ fieldset,
 
 /* eCommerce Discount Block */
 .w-commerce-commercecheckoutdiscounts {
-    padding: var(--space--main) var(--space--main);
+    padding: var(--space--5) var(--space--5);
 }
 .w-commerce-commercecheckoutdiscountslabel {
     font-size: var(--font-size--h5);
     line-height: var(--line-height--1-1em);
     font-family: var(--font-family--heading);
     font-weight: var(--font-weight--heading-main);
-    margin-bottom: var(--space--main);
+    margin-bottom: var(--space--5);
 }

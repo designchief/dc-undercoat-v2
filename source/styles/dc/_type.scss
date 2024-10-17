@@ -42,18 +42,86 @@ $breakpoint-max: 90rem; // Equivalent to 1440px
     }
 }
  
+body {
+    font-weight: var(--font-weight--text-main);
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+h1 {
+    @include u-text-h1;
+}
+h2 {
+    @include u-text-h2;
+}
+h3 {
+    @include u-text-h3;
+}
+h4 {
+    @include u-text-h4;
+}
+h5 {
+    @include u-text-h5;
+}
+h6 {
+    @include u-text-h6;
+}
+
+
+/* Lumos reset text styles when inside text utility */
+[class*="u-text-style-"] > :is(h1,h2,h3,h4,h5,h6,p,blockquote) {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-wrap: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+*:not(.u-margin-trim-off, .u-block-gap)> :first-child,
+*:not(.u-margin-trim-off, .u-block-gap)> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
+    margin-top: 0;
+}
+
+*:not(.u-margin-trim-off, .u-block-gap)> :last-child,
+*:not(.u-margin-trim-off, .u-block-gap)> :not(:has(~ :not(.w-condition-invisible))) {
+    margin-bottom: 0;
+}
+
+
+// a:not([class]) {
+//     text-decoration: underline;
+// }
+
+ul:where([class]),
+ol:where([class]) {
+    list-style: "";
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li:where([class]) {
+    margin-bottom: 0;
+}
 
 /* Text Links */
-h1, h2, h3, h4, h5, h6, p, blockquote, cite, figcaption, li, [class*="notification"], .form_main_label {
+h1, h2, h3, h4, h5, h6, p, blockquote, cite, figcaption, .u-rich-text li, [class*="notification"], .form_main_label {
     a {
         @include text-link;
     }
 }
-h1, h2, h3, h4, h5, h6 {
-    a {
-        line-height: inherit;
-    }
-}
+// h1, h2, h3, h4, h5, h6 {
+//     a {
+//         line-height: inherit;
+//     }
+// }
 
 /* theme & link transitions */
 body,
@@ -67,23 +135,27 @@ section,
 [class*="card"],
 .iub-btn,
 #iubFooterBtnContainer button,
-#themeToggle .navbar_menu_icon path,
+.is-ldm-toggle .navbar_menu_icon path,
 .navbar_toggle .navbar_toggle_icon_line {
     transition-property: background-color, border-color, box-shadow, border-radius, opacity;
     transition-duration: 300ms;
 }
 
 /* default rich text font styles */
+// .w-richtext a {
+//     position: relative;
+//     z-index: 4;
+// }
 .w-richtext,
 .u-rich-text {
 
-    > *:first-child {
-        margin-top: 0;
-    }
+    // > *:first-child {
+    //     margin-top: 0;
+    // }
 
-    > *:last-child {
-        margin-bottom: 0;   
-    }
+    // > *:last-child {
+    //     margin-bottom: 0;   
+    // }
 
     h1, h2, h3, h4, h5, h6 { 
         margin-top:  var(--size--2rem);
@@ -91,9 +163,13 @@ section,
     }
 
     p, ol, ul { 
-        margin-top: 0;
+        margin-top: 0rem;
         margin-bottom: var(--size--1rem);
     }
+
+    // ol, ul { 
+    //     padding-left: 1.5em;
+    // }
 
     figure,
     blockquote {
@@ -102,19 +178,24 @@ section,
     }
 
     h1 {
-        font-size: var(--font-size--h2);
+        @include u-text-h2;
     }
     h2 {
-        font-size: var(--font-size--h3);
+        @include u-text-h3;
     }
     h3 {
-        font-size: var(--font-size--h4);
+        @include u-text-h4;
     }
     h4 {
-        font-size: var(--font-size--h5);
+        @include u-text-h5;
     }
     h5 {
-        font-size: var(--font-size--h6);
+        @include u-text-h6;
+    }
+
+    a {
+        position: relative;
+        z-index: 4;
     }
 
 }

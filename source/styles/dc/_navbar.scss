@@ -11,7 +11,7 @@
     .w-container,
     // .w-dropdown-toggle,
     .w-dropdown-btn {
-        float: none;
+        float: unset;
         // position: static;
     } 
 
@@ -25,14 +25,7 @@
 
 /* navbar widths */
 [navbar-width="full"] { 
-    .navbar_container {
-        max-width: 100%; 
+    .navbar_contain {
+        max-width: var(--container--full); 
     } 
-}
-
-/* Remove right padding on mobile portrait */
-.navbar_container {
-    @include landscape-down {
-        // padding-right: 0 !important;
-    }
 }
