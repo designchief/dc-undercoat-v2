@@ -9,6 +9,19 @@
     }
 }
 
+/* reset text styles for wrap */
+[class*="u-text-"] > :where(h1,h2,h3,h4,h5,h6,p,blockquote) {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	text-transform: inherit;
+	text-wrap: inherit;
+	margin-top: inherit;
+	margin-bottom: inherit;
+}
+
 /* line clamp */
 .u-line-clamp-1, .u-line-clamp-2, .u-line-clamp-3, .u-line-clamp-4 {
 	display: -webkit-box;
@@ -72,16 +85,6 @@
     }
 }
 
-/* Lumos margin trim classes */
-.u-margin-trim > :first-child,
-.u-margin-trim > :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
-    margin-top: 0;
-}
-.u-margin-trim > :last-child,
-.u-margin-trim > :not(:has(~ :not(.w-condition-invisible))) {
-    margin-bottom: 0;
-}
-
 /* Lumos hide classes */
 .u-hide-if-empty:empty,
 .u-hide-if-empty:not(:has(> *:not(.w-condition-invisible))),
@@ -90,6 +93,30 @@
 .u-embed-js,
 .u-embed-css {
     display: none !important;
+}
+
+/* Lumos reset text styles when inside text utility */
+[class*="u-text-style-"] > :is(h1,h2,h3,h4,h5,h6,p,blockquote) {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-wrap: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+/* Lumos margin trim */
+*:not(.u-margin-trim-off, .u-block-gap)> :first-child,
+*:not(.u-margin-trim-off, .u-block-gap)> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
+    margin-top: 0;
+}
+
+*:not(.u-margin-trim-off, .u-block-gap)> :last-child,
+*:not(.u-margin-trim-off, .u-block-gap)> :not(:has(~ :not(.w-condition-invisible))) {
+    margin-bottom: 0;
 }
 
 /* Lumos clickable classes */

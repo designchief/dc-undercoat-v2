@@ -1,21 +1,14 @@
 // Import variables
 @use "../base" as *;
 
-
-/* Buttons */
-// .button {
-//     &:hover {
-//         .button_icon {
-//             opacity: 1;
-//         }
-//     }
-// }
-
 button {
-    background-color: unset;
-    padding: unset;
-    text-align: inherit;
-    cursor: pointer;
+	background-color: unset;
+	padding: unset;
+	text-align: inherit;
+
+    :not(:disabled) {
+        cursor: pointer;
+    }    
 }
 
 /* button sizes */
@@ -23,7 +16,7 @@ button {
     font-size: var(--font-size--small-text);
 }
 [data-button-size="large"] {
-    font-size: var(--font-size--xlarge-text);
+    font-size: var(--font-size--large-text);
 }
 
 
@@ -55,7 +48,7 @@ a:focus-visible,
 button:focus-visible,
 .w-checkbox-input--inputType-custom.w--redirected-focus,
 .w-form-formradioinput--inputType-custom.w--redirected-focus {
-    outline: 0.125rem solid var(--theme--border);
+    outline: 0.125rem solid var(--theme--border-1);
     outline-offset: 0.125rem;
 }
 .w-checkbox-input--inputType-custom.w--redirected-focus,

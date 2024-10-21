@@ -21,11 +21,11 @@ $typography-sizes: (
     "h4": (max: 2rem, min: 1.35rem),
     "h5": (max: 1.5rem, min: 1.175rem),
     "h6": (max: 1.25rem, min: 1rem),
-    "main-text": (max: 1.2rem, min: 1rem),
+    "main-text": (max: 1.25rem, min: 1rem),
     "small-text": (max: 1rem, min: 0.875rem),
     "xsmall-text": (max: 0.875rem, min: 0.75rem),
-    "large-text": (max: 1.4rem, min: 1.125rem),
-    "xlarge-text": (max: 1.6rem, min: 1.25rem), 
+    "large-text": (max: 1.5rem, min: 1.25rem),
+    "xlarge-text": (max: 1.75rem, min: 1.5rem), 
 );
 
 $breakpoint-min: 20rem; // Equivalent to 320px
@@ -47,10 +47,22 @@ body {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
 }
-h1,h2,h3,h4,h5,h6 {
+
+label {
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h1,h2,h3,h4,h5,h6,blockquote {
     text-wrap: balance;
     margin-top: 0rem;
     margin-bottom: 0rem;
+}
+p {
+    text-wrap: pretty;
 }
 h1 {
     @include u-text-h1;
@@ -71,44 +83,19 @@ h6 {
     @include u-text-h6;
 }
 
-
-/* Lumos reset text styles when inside text utility */
-[class*="u-text-style-"] > :is(h1,h2,h3,h4,h5,h6,p,blockquote) {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    text-transform: inherit;
-    text-wrap: inherit;
-    margin-top: inherit;
-    margin-bottom: inherit;
-}
-
-*:not(.u-margin-trim-off, .u-block-gap)> :first-child,
-*:not(.u-margin-trim-off, .u-block-gap)> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
-    margin-top: 0;
-}
-
-*:not(.u-margin-trim-off, .u-block-gap)> :last-child,
-*:not(.u-margin-trim-off, .u-block-gap)> :not(:has(~ :not(.w-condition-invisible))) {
-    margin-bottom: 0;
-}
-
-
 // a:not([class]) {
 //     text-decoration: underline;
 // }
 
-ul:where([class]),
-ol:where([class]) {
-    list-style: "";
+/* Reset Unordered list when class applied */
+ul:where([class]) {
+    list-style: none;
     margin-bottom: 0;
     padding-left: 0;
-}
 
-li:where([class]) {
-    margin-bottom: 0;
+    li {
+        margin-bottom: 0;
+    }
 }
 
 /* Text Links */
@@ -117,36 +104,40 @@ h1, h2, h3, h4, h5, h6, p, blockquote, cite, figcaption, .u-rich-text li, [class
         @include text-link;
     }
 }
+
 // h1, h2, h3, h4, h5, h6 {
 //     a {
 //         line-height: inherit;
 //     }
 // }
 
-/* theme & link transitions */
+/* Transitions for theme & link */
 body,
 a,
 section,
-.button,
-.button-text,
-.button-icon,
+.u-button-style,
+.button_text_wrap,
 [class*="link"],
 .u-nav-item,
 [class*="card"],
 .iub-btn,
 #iubFooterBtnContainer button,
 .is-ldm-toggle .navbar_menu_icon path,
-.navbar_toggle .navbar_toggle_icon_line {
+.navbar_toggle_wrap .navbar_toggle_icon_line {
     transition-property: background-color, border-color, box-shadow, border-radius, opacity;
     transition-duration: 300ms;
 }
 
 /* default rich text font styles */
-// .w-richtext a {
-//     position: relative;
-//     z-index: 4;
-// }
-.w-richtext,
+.w-richtext{
+
+    a {
+        position: relative;
+        z-index: 4;
+    }
+
+}
+
 .u-rich-text {
 
     // > *:first-child {
@@ -160,16 +151,13 @@ section,
     h1, h2, h3, h4, h5, h6 { 
         margin-top:  var(--size--2rem);
         margin-bottom: var(--size--1-25rem);
+        
     }
 
     p, ol, ul { 
         margin-top: 0rem;
         margin-bottom: var(--size--1rem);
     }
-
-    // ol, ul { 
-    //     padding-left: 1.5em;
-    // }
 
     figure,
     blockquote {
@@ -191,11 +179,6 @@ section,
     }
     h5 {
         @include u-text-h6;
-    }
-
-    a {
-        position: relative;
-        z-index: 4;
     }
 
 }

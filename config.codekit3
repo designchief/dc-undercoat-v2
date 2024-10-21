@@ -1304,28 +1304,12 @@
       "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script-links.html",
       "oF" : 0
     },
-    "\/source\/iubenda\/_js-iubenda-cookie-script-v2.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script-v2.html",
-      "oF" : 0
-    },
     "\/source\/iubenda\/_js-iubenda-cookie-script-v3.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script-v3.html",
-      "oF" : 0
-    },
-    "\/source\/iubenda\/_js-iubenda-cookie-script.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/iubenda\/_js-iubenda-cookie-script.html",
       "oF" : 0
     },
     "\/source\/iubenda\/_js-iubenda-us-only.html" : {
@@ -1351,14 +1335,6 @@
       "oA" : 0,
       "oAP" : "\/docs\/iubenda\/iubenda-custom-banner-v2.html",
       "oF" : 0
-    },
-    "\/source\/iubenda\/iubenda-custom-banner.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 1,
-      "oA" : 0,
-      "oAP" : "\/docs\/iubenda\/iubenda-custom-banner.html",
-      "oF" : 1
     },
     "\/source\/js\/_js-dynamic-year.html" : {
       "cB" : 0,
@@ -1408,55 +1384,20 @@
       "oAP" : "\/docs\/js\/_js-theme-toggle-v3.html",
       "oF" : 0
     },
-    "\/source\/js\/main.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/docs\/js\/main-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/source\/lumos\/lumos-v2-2.0.2\/page_code_base.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/lumos\/lumos-v2-2.0.2\/page_code_base.html",
-      "oF" : 0
-    },
-    "\/source\/lumos\/lumos-v2-2.0.2\/page_code_color.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/lumos\/lumos-v2-2.0.2\/page_code_color.html",
-      "oF" : 0
-    },
-    "\/source\/lumos\/lumos-v2-2.0.2\/page_code_custom.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/lumos\/lumos-v2-2.0.2\/page_code_custom.html",
-      "oF" : 0
-    },
-    "\/source\/lumos\/lumos-v2-2.0.2\/page_code_responsive.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/lumos\/lumos-v2-2.0.2\/page_code_responsive.html",
-      "oF" : 0
-    },
     "\/source\/lumos\/lumos-v2-2.0.5\/LICENSE" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/lumos\/lumos-v2-2.0.5\/LICENSE",
+      "oF" : 0
+    },
+    "\/source\/lumos\/lumos-v2-2.0.5\/page_code_base_cloneable-v2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/lumos\/lumos-v2-2.0.5\/page_code_base_cloneable-v2.html",
       "oF" : 0
     },
     "\/source\/lumos\/lumos-v2-2.0.5\/page_code_base_cloneable.html" : {
@@ -1725,21 +1666,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/source\/styles\/iubenda\/_iubenda-dc-custom-v7.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/styles\/iubenda\/_iubenda-dc-custom-v7.css",
-      "oF" : 0,
-      "oS" : 2,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/source\/styles\/iubenda\/_iubenda-dc-custom-v8.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1783,7 +1709,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 750881786.46039999
+    "lastBuiltDate" : 751208242.11711097
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

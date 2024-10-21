@@ -115,7 +115,7 @@
 /* eCommerce Checkout Form Header Block */
 .w-commerce-commercecheckoutblockheader,
 .w-commerce-commercecheckoutsummaryblockheader, {
-    border-bottom: 1px solid var(--theme--border);
+    border-bottom: 1px solid var(--theme--border-1);
     font-size: var(--font-size--small-text);
 
 
@@ -160,20 +160,20 @@ fieldset,
         height: 3rem;
         margin-bottom: var(--space--3);
         padding: 0.35rem var(--space--3) 0.25rem;
-        border: solid var(--border-width--main) var(--theme--border);
+        border: solid var(--border-width--main) var(--theme--border-1);
         border-radius: var(--radius--small);
         background-color: var(--theme--background-3);
-        color: var(--theme--text);
+        color: var(--theme--text-1);
         font-size: var(--font-size--main-text);
         line-height: var(--line-height--1-3em);
         font-weight: var(--font-weight--text-main);
 
         &:focus {
-            border-color: var(--swatch--medium);
+            border-color: var(--swatch--medium-1);
         }
 
         &:placeholder {
-            color: var(--swatch--medium);
+            color: var(--swatch--medium-1);
         }
     }
 
@@ -182,7 +182,7 @@ fieldset,
         width: 1.5rem;
         height: 1.5rem;
         margin: 0px var(--space--3) 0px 0px;
-        border: solid var(--border-width--main) var(--theme--border);
+        border: solid var(--border-width--main) var(--theme--border-1);
         background-color: var(--theme--background-3);
         flex-grow: 0;
         flex-shrink: 0;
@@ -191,7 +191,7 @@ fieldset,
         box-shadow: none;
 
         &:focus {
-            border-color: var(--swatch--medium);
+            border-color: var(--swatch--medium-1);
             box-shadow: none;
         }
 

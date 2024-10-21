@@ -90,40 +90,42 @@ video {
         padding: 0;
     }
 }
+
+* {
+	vertical-align: top;
+}
+
 svg {
 	max-width: 100%; 
 }
+
 section, header, footer {
 	position: relative;
 }
-@media (prefers-color-scheme: light) {
-    option {
-        color: black;
-    }
-}
+
+// @media (prefers-color-scheme: light) {
+//     option {
+//         color: black;
+//     }
+// }
+
 img::selection {
     background: transparent;
 }
 
-// SVG Icon setup
-// .u-icon,
-// .button_icon,
-// .button-text_icon,
-// .button-icon_icon,
-// .styleguide_icon_list {
-//     svg * {
-//         vector-effect: non-scaling-stroke;
-//         stroke-width: var(--svg-stroke-width--main);
-//     }
-// }
+/* Grid Guide */
+html:not(.wf-design-mode) .g_grid-guide_wrap {
+    display: none;
+}
 
+.g_grid-guide_layout {
+    counter-reset: gridcount;
 
-
-// .styleguide_icon_list {
-//     svg {
-//         width: 2rem !important;
-//     }
-// }
+    > div::before {
+        counter-increment: gridcount;
+        content: counter(gridcount);
+    }
+}
 
 /* lightbox backdrop color */
 .w-lightbox-backdrop {
