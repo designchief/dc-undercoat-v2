@@ -91,9 +91,9 @@ video {
     }
 }
 
-* {
-	vertical-align: top;
-}
+// * {
+// 	vertical-align: top;
+// }
 
 svg {
 	max-width: 100%; 
@@ -132,13 +132,3 @@ html:not(.wf-design-mode) .g_grid-guide_wrap {
     background: var(--theme--overlay-lightbox);
 }
 
-/* webflow slider */
-.w-slider-dot {
-    color: currentColor;
-    background-color: currentColor !important;
-    opacity: 40%;
-
-    &.w-active {
-        opacity: 100%;
-    }
-}

@@ -9,7 +9,7 @@
     }
 }
 
-/* reset text styles for wrap */
+/* Lumos reset text styles when inside text utility */
 [class*="u-text-"] > :where(h1,h2,h3,h4,h5,h6,p,blockquote) {
 	font-family: inherit;
 	font-size: inherit;
@@ -85,6 +85,17 @@
     }
 }
 
+/* CSS Accordion based on Lumos */
+.u-accordion:has(.u-accordion-checkbox:checked) {
+    .u-accordion-content {
+        grid-template-rows: 1fr;
+    }
+
+    .u-accordion-icon {
+        transform: rotate(45deg);
+    }
+}
+
 /* Lumos hide classes */
 .u-hide-if-empty:empty,
 .u-hide-if-empty:not(:has(> *:not(.w-condition-invisible))),
@@ -95,29 +106,27 @@
     display: none !important;
 }
 
-/* Lumos reset text styles when inside text utility */
-[class*="u-text-style-"] > :is(h1,h2,h3,h4,h5,h6,p,blockquote) {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    text-transform: inherit;
-    text-wrap: inherit;
-    margin-top: inherit;
-    margin-bottom: inherit;
-}
-
 /* Lumos margin trim */
-*:not(.u-margin-trim-off, .u-block-gap)> :first-child,
-*:not(.u-margin-trim-off, .u-block-gap)> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
-    margin-top: 0;
-}
+*:not(.u-margin-trim-off, .u-block-gap, .u-slider > div) {
+    > :first-child,
+    > :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
+        margin-top: 0;
+    }
+    > :last-child,
+    > :not(:has(~ :not(.w-condition-invisible))) {
+        margin-bottom: 0;
+    }
 
-*:not(.u-margin-trim-off, .u-block-gap)> :last-child,
-*:not(.u-margin-trim-off, .u-block-gap)> :not(:has(~ :not(.w-condition-invisible))) {
-    margin-bottom: 0;
 }
+// *:not(.u-margin-trim-off, .u-block-gap, .u-slider)> :first-child,
+// *:not(.u-margin-trim-off, .u-block-gap)> :not(:not(.w-condition-invisible) ~ :not(.w-condition-invisible)) {
+//     margin-top: 0;
+// }
+
+// *:not(.u-margin-trim-off, .u-block-gap)> :last-child,
+// *:not(.u-margin-trim-off, .u-block-gap)> :not(:has(~ :not(.w-condition-invisible))) {
+//     margin-bottom: 0;
+// }
 
 /* Lumos clickable classes */
 .wf-design-mode .g_clickable_wrap {
@@ -129,3 +138,44 @@
 .g_clickable_wrap a[href="#"] ~ button {
     display: block;
 }
+
+/* webflow slider */
+.u-slider {
+    .u-slider-nav {
+        > div {
+            color: var(--theme--text-1);
+            background-color: color-mix(in srgb, var(--theme--background-3) 50%, transparent);
+            font-size: var(--font-size--xsmall-text);
+            line-height: 1;
+            display: flex;
+            height: 1.6em;
+            width: 1.6em;
+            margin: 0px !important;
+            padding: 0px !important;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+            align-items: center;
+            text-align: center;
+            border-radius: var(--radius--round);
+
+            &.w-active {
+                background-color: var(--theme--background-3);
+            }
+        }
+    }
+}
+
+
+// .w-slider-dot {
+//     color: currentColor;
+//     background-color: currentColor !important;
+//     opacity: 40%;
+
+//     &.w-active {
+//         opacity: 100%;
+//     }
+// }
