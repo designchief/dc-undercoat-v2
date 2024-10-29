@@ -21,7 +21,6 @@
 /* Banner full screen wrapper */
 .iubenda-cs-default-floating {
     background-color: transparent;
-    padding: var(--iubenda--banner-margin);
 }
 
 /* Banner & Floating preferences button surface */
@@ -36,7 +35,7 @@
 /* Banner wrapper */
 .iubenda-cs-content {
     max-width: 20rem;
-    // margin: var(--iubenda--banner-margin);
+    margin: var(--iubenda--banner-margin) !important;
     padding: var(--card--padding);
     border-radius: var(--radius--small);
 
