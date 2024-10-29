@@ -90,7 +90,7 @@ video {
         padding: 0;
     }
 }
-
+ 
 // * {
 // 	vertical-align: top;
 // }
@@ -118,14 +118,14 @@ html:not(.wf-design-mode) .g_grid-guide_wrap {
     display: none;
 }
 
-.g_grid-guide_layout {
-    counter-reset: gridcount;
+// .g_grid-guide_layout {
+//     counter-reset: gridcount;
 
-    > div::before {
-        counter-increment: gridcount;
-        content: counter(gridcount);
-    }
-}
+//     > div::before {
+//         counter-increment: gridcount;
+//         content: counter(gridcount);
+//     }
+// }
 
 /* lightbox backdrop color */
 .w-lightbox-backdrop {
