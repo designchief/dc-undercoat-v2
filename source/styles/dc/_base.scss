@@ -118,6 +118,7 @@ html:not(.wf-design-mode) .g_grid-guide_wrap {
     display: none;
 }
 
+/* Grid Guide counter - switched off counter on grid because of issue with OL tag and blank page after exiting preview mode */
 // .g_grid-guide_layout {
 //     counter-reset: gridcount;
 
